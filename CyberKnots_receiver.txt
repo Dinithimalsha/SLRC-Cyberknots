@@ -1,0 +1,62 @@
+#include <webots/Receiver.hpp>
+#include <iostream>
+#include <math.h>
+#include <stdlib.h>
+#include <cstring>
+#include <iostream>
+#include <string> 
+#include <webots/Robot.hpp>
+#include <webots/LED.hpp>
+ 
+#define TIME_STEP 64
+
+using namespace std;
+using namespace webots;
+
+Robot *robot = new Robot();
+ 
+Receiver *receiver; 
+char rec_name[10] = {"receiver"};
+
+LED *led[2];
+char led_name[2][10] = {"led_red","led_blue"};
+
+void initReceiver(){
+  receiver = robot->getReceiver(rec_name);
+  receiver->enable(TIME_STEP);
+}
+ 
+void initLED(){
+
+  led[0] = robot->getLED("led_red");
+  led[1]= robot->getLED("led_blue");
+  
+}
+void ReceiveAndDecode(){
+
+   if (receiver->getQueueLength() > 0) {
+      string message((const char *)receiver->getData());
+      receiver->nextPacket();
+      if(message.compare("blue") == 0){
+      led[1]->set(3);
+      led[0]->set(0);
+    }
+    if(message.compare("red") == 0){
+      led[0]->set(1);
+      led[1]->set(0);
+    }       
+  }
+   
+}
+
+int main(int argc, char **argv) {
+   initReceiver();
+   initLED();
+ 
+  while (robot->step(TIME_STEP) != -1) {
+    ReceiveAndDecode();
+         
+  }
+    delete robot;
+    return 0;
+}

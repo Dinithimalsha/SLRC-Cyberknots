@@ -1,0 +1,475 @@
+#VRML_OBJ R2021a utf8
+Robot {
+  translation 0.37521597904864273 -0.00014709810427672443 -0.4013329607329801
+  rotation 1.3869870736996219e-05 -0.9999999997827157 1.5562625052916057e-05 -1.5432251907413868
+  children [
+    DistanceSensor {
+      translation -1.01962e-08 0.01 -0.042
+      rotation 0 0 -1 1.5708
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "Front"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -2.03924e-08 0.01 0.043
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "end"
+      type "infra-red"
+    }
+    Solid {
+      translation 0.03 0.13 -0.02
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 1
+          }
+          geometry Box {
+            size 0.01 0.01 0.05
+          }
+        }
+      ]
+      name "solid(3)"
+    }
+    Emitter {
+      translation 0.03 0.1 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.05 0.01
+          }
+        }
+      ]
+      channel 1
+    }
+    DistanceSensor {
+      translation 0.027 0.01 0
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "LF_8"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.027 0.00999997 0
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "LF_9"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -1.01962e-08 0.01 -0.014
+      rotation 0 0 -1 1.5708
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "LF_11"
+      type "infra-red"
+    }
+    Solid {
+      translation 0 0.01 -0.03
+      children [
+        DEF ball Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 0
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.01
+            subdivision 3
+          }
+        }
+      ]
+      name "balance ball2"
+      boundingObject USE ball
+      physics Physics {
+      }
+    }
+    Solid {
+      translation 0 0.01 0.03
+      children [
+        DEF ball Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 0
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.01
+            subdivision 3
+          }
+        }
+      ]
+      name "balance ball"
+      boundingObject USE ball
+      physics Physics {
+      }
+    }
+    Solid {
+      translation 0 0.05 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 0
+            metalness 0
+          }
+          geometry Box {
+            size 0.005 0.005 0.1
+          }
+        }
+      ]
+      name "solid(2)"
+    }
+    DistanceSensor {
+      translation -0.0449999 0.070001 -2.38824e-07
+      rotation 2.6535899999906573e-06 0.9999999999964793 -1.2723699999955203e-14 3.14159
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "WF_5"
+      lookupTable [
+        0 0 0
+        0.11 1000 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.0450001 0.0700001 0
+      rotation 0 0 1 -5.307179586466759e-06
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "WF_2"
+      lookupTable [
+        0 0 0
+        0.11 1000 0
+      ]
+    }
+    DistanceSensor {
+      translation -0.0316399 0.0700006 -0.0316391
+      rotation 2.6535899999890547e-06 0.9999999999958753 -1.0991499999954664e-06 2.3562
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "WF_6"
+      lookupTable [
+        0 0 0
+        0.11 1000 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.032 0.0700006 0.032
+      rotation -2.6535899999362045e-06 -0.9999999999759588 -6.406339999845984e-06 0.785397
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "WF_3"
+      lookupTable [
+        0 0 0
+        0.11 1000 0
+      ]
+    }
+    DistanceSensor {
+      translation -0.0365681 0.0700006 0.0265689
+      rotation 2.6536099999890544e-06 0.9999999999958751 1.099159999995466e-06 -2.356185307179586
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "WF_4"
+      lookupTable [
+        0 0 0
+        0.11 1000 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.027071 0.0700006 -0.0370711
+      rotation -2.653579999936205e-06 -0.9999999999759588 6.406319999845984e-06 -0.7854053071795866
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "WF_1"
+      lookupTable [
+        0 0 0
+        0.11 1000 0
+      ]
+    }
+    DistanceSensor {
+      translation -5.30718e-08 0.0500005 -0.05
+      rotation 0 0 1 -5.307179586466759e-06
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "PC_2"
+      lookupTable [
+        0 0 0
+        0.25 25 0
+      ]
+    }
+    DistanceSensor {
+      translation -2.65359e-08 0.05 -0.05
+      rotation 0 0 1 3.14159
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "PC_1"
+      lookupTable [
+        0 0 0
+        0.25 25 0
+      ]
+    }
+    DistanceSensor {
+      translation -1.01962e-08 0.01 0.016
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "LF_10"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.013 0.00999998 0
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "LF_7"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.013 0.00999999 0
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "LF_6"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.0108 0.00999999 0
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "LF_5"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.008 0.01 0
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "LF_4"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.0108 0.00999999 0
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "LF_3"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.008 0.00999999 0
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "LF_2"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -6.3674e-13 0.01 -3.21285e-07
+      rotation -0.7071067811862797 0.7071067811862797 -8.704337306448644e-07 -3.1415853071795863
+      children [
+        Shape {
+          geometry Box {
+            size 0.001 0.001 0.001
+          }
+        }
+      ]
+      name "LF_1"
+      type "infra-red"
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 206.14443977032082
+        axis -1 0 0
+        anchor -0.045 0.025 0
+      }
+      device [
+        RotationalMotor {
+          name "LF"
+        }
+      ]
+      endPoint Solid {
+        translation -0.044999943424945954 0.02499799519538199 -4.209412955862528e-06
+        rotation -0.4927361231615047 0.49234386903285443 -0.7175016568326027 4.387098756497857
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.025
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE wheel
+        physics Physics {
+        }
+        linearVelocity 1.1871833589740515e-12 9.045601454052365e-17 3.340734794616084e-14
+        angularVelocity 1.9949604681377267e-12 3.297136683354753e-13 -7.106747253072664e-11
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 186.5884438621257
+        axis -1 0 0
+        anchor 0.045 0.025 0
+      }
+      device [
+        RotationalMotor {
+          name "RF"
+        }
+      ]
+      endPoint Solid {
+        translation 0.04500005659139161 0.025000624446204493 -4.395392833767452e-06
+        rotation 0.6325703127692098 -0.6320667113062696 0.4476007951976191 2.29928451753676
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.025
+            }
+          }
+        ]
+        boundingObject USE Wheel
+        physics Physics {
+        }
+        linearVelocity 1.156770887110276e-12 -4.523526542150406e-16 3.209361684603777e-14
+        angularVelocity 1.901536588987478e-12 3.2991137542431926e-13 -6.956950894559486e-11
+      }
+    }
+    DEF Body Transform {
+      translation 0 0.0515 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.08
+            radius 0.045
+          }
+        }
+      ]
+    }
+  ]
+  name "robot_1"
+  boundingObject USE Body
+  physics Physics {
+  }
+  controller "CyberKnots_controller"
+  linearVelocity 1.1718640569211629e-12 -1.0988151126243725e-16 3.2509731199219434e-14
+  angularVelocity 2.272068228806433e-15 3.3366627896297637e-13 3.652066167285115e-19
+}
